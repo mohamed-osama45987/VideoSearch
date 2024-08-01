@@ -46,6 +46,10 @@ const VideoUploader = () => {
       setIsProcessing(true);
       const file = acceptedFiles[0];
 
+      if (!file) {
+        setIsProcessing(false);
+        return;
+      }
       // Create a URL object for the file to check its duration
       const videoUrl = URL.createObjectURL(file);
       const video = document.createElement("video");
@@ -68,7 +72,7 @@ const VideoUploader = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "video/*": [".mp4"],
+      "video/mp4": [".mp4"],
     },
     maxFiles: 1,
     maxSize: 104857600, // limit to 100 MB,
