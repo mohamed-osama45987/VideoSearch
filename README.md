@@ -46,13 +46,13 @@ Create a `.env` file in the frontend directory with the following variables:
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/mohamed-osama45987/VideoSearch.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd VideoSearch
 ```
 
 Install dependencies
